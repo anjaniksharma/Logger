@@ -2,7 +2,7 @@ import os, sys, re, errno,logging
 import time, datetime
 from logging.handlers import TimedRotatingFileHandler
 
-class NPDLogger(logging.getLoggerClass()):
+class Logger(logging.getLoggerClass()):
         def __init__(self,log_file_name = None, log_severity_level = None, console = None):
                 if not log_severity_level:
                         self.log_severity_level = 'debug'
